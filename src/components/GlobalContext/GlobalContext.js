@@ -20,21 +20,21 @@ export const DataProvider = props => {
     })
   
     useEffect(()=> {
-        fetch('/students').then(res => res.json()).then(data => setStudents({
+        fetch('https://schoolmaster-api.herokuapp.com/students').then(res => res.json()).then(data => setStudents({
             status:true,
             data:data,
             error:false
         }))
     }, [])
     useEffect(()=> {
-        fetch('/stuffs').then(res => res.json()).then(data => setStuffs({
+        fetch('https://schoolmaster-api.herokuapp.com/stuffs').then(res => res.json()).then(data => setStuffs({
             status:true,
             data:data,
             error:false
         }))
     }, [])
     useEffect(()=> {
-        fetch('/expernses').then(res => res.json()).then(data => setExpernse({
+        fetch('https://schoolmaster-api.herokuapp.com/expernses').then(res => res.json()).then(data => setExpernse({
             status:true,
             data:data,
             error:false

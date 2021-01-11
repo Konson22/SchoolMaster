@@ -7,20 +7,17 @@ body{
   justify-content: space-between;
 }
 aside{
-  height: 100vh;
+  min-height: 100vh;
   flex-basis: 15%;
-  background-color: blueviolet;
+  background-color: rgb(211, 55, 107);
 }
 section{
   flex: 1;
 }
 main{
   margin: 20px;
-  /* padding: 15px; */
   flex: 1;
   position: relative;
-  /* background-color: #333; */
-
 }
 
 .App-logo {

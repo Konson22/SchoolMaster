@@ -15,7 +15,7 @@ export default function Profile() {
     })
     const {id} = useParams()
     useEffect(()=> {
-        fetch('/students').then(res => res.json())
+        fetch('https://schoolmaster-api.herokuapp.com/students').then(res => res.json())
         .then(data => data.find(student => student.id == id))
         .then( profile => setStudent({
             status:true,

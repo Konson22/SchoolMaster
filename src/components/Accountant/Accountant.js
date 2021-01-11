@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { Card, Row, Col, Button, Form, FormGroup, FormControl, TabContainer, TabContent } from 'react-bootstrap'
-import { BsPersonPlus, BsPen, BsTrash, BsPerson, BsSearch } from 'react-icons/bs'
-import { FaSave, FaPrint, FaDollarSign } from 'react-icons/fa'
+import { Card, Row, Col, Button, Form, FormGroup, FormControl } from 'react-bootstrap'
+import { FaSave } from 'react-icons/fa'
 import AccountantLinks from './AccountantLinks'
-import Chartjs from './Chartjs'
+import Chartjs from '../Chartjs/Chartjs'
 import {GlobalContext} from '../GlobalContext/GlobalContext'
 
 
@@ -11,22 +10,22 @@ import './Accountant.css'
 
 export default function Accountant() {
     const data = useContext(GlobalContext)
-    console.log(data.expernse.data)
+
     return (
         <>
         <AccountantLinks/>
         <Row>
-            <Col md={4}>
+            <Col md={6}>
                 <Card>
                     <Chartjs />
                 </Card>
             </Col>
-            <Col md={4}>
+            <Col md={6}>
                 <Card>
                     <Chartjs />
                 </Card>
             </Col>
-            <Col md={4}>
+            <Col md={7}>
                 <Card className="alert-secondary">
                 <Card.Body>
                     <h3>Expense entary form</h3>

@@ -36,7 +36,8 @@ function App() {
           <main>
             <Switch>
               <Route exact path="/"><Main /></Route>
-              <Route exact path="/students"><Students /></Route>
+              <Route exact path="/SchoolMaster"><Main /></Route>
+              <Route exact path="/students/:cName"><Students /></Route>
               <Route exact path="/students/profile/:id"><Profile /></Route>
               <Route exact path="/stuffs"><Stuffs /></Route>
               <Route exact path="/accountant"><Accountant /></Route>

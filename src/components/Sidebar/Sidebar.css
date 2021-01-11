@@ -18,7 +18,10 @@
     margin: 0;
 }
 .sidebar-body .nav:hover{
-    background-color: rgb(29, 93, 233);
+    background-color: rgb(230, 76, 127);
+    box-shadow: 4px 4px 2px rgba(0,0,0,0.5);
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     color: #fff;
 }
 .sidebar-body .nav:hover .nav-link{
@@ -27,4 +30,16 @@
 .sidebar-body .nav-link{
     color: #fff;
     font-size: 20px;
+}
+
+.inner-nav{
+    transition: 0.5s;
+    z-index: -10;
+}
+
+.hideNav{
+    display: none;
+}
+.inner-nav ul li{
+    padding-left: 30px;
 }

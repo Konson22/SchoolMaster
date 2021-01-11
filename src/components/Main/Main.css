@@ -25,3 +25,12 @@
     font-size: 40px;
     opacity: 0.8;
 }
+
+.title-header{
+  background-color: rgb(211, 55, 107);
+}
+.message-box{
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { ButtonGroup, FormControl, Button, Table } from 'react-bootstrap'
 import { BsPersonPlus, BsPen, BsTrash, BsPerson, BsSearch } from 'react-icons/bs'
 import Profile from './Profile'
@@ -11,15 +11,40 @@ import {GlobalContext} from '../GlobalContext/GlobalContext'
 import './Students.css'
 
 export default function Students() {
-
-    const data = useContext(GlobalContext)
-    console.log(data.students.data)
+    const [students, setStudents] = useState({
+        status:false,
+        data:null,
+        error:false
+    })
+    const {cName} = useParams()
+    let splitedData = cName.split('-').join(' ')
+    useEffect( ()=> {
+        setStudents({
+            status:false,
+            data:null,
+            error:false
+        })
+        fetch(`https://schoolmaster-api.herokuapp.com/accountant/single-class-record/${splitedData}`).then(res => res.json()).then(data => setStudents({
+            status:true,
+            data:data,
+            error:false
+        }))
+    }, [cName])
+    
     let content;
-    if(data.students.status){
-        content = <DisplayStudent students={ data.students.data } />
-    }else{
+    if(students.status){
+        if(students.data.length != 0){
+            content = <DisplayStudent students={ students.data } />
+        }else{
+            content = <div>
+                <h2>No Students in { cName }</h2>
+                </div>
+        }
+    }
+    if(!students.status){
         content = <Loader />
     }
+
     return (
         <>
         <div className="student-header">

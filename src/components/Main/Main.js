@@ -6,6 +6,7 @@ import { FaUserGraduate, FaUserTie } from 'react-icons/fa'
 import './Main.css'
 import Chartjs from '../Chartjs/Chartjs'
 import {GlobalContext} from '../GlobalContext/GlobalContext'
+import Notification from './Notification/Notification'
 
 
 
@@ -87,48 +88,7 @@ export default function Main() {
             <article>
                 <Row className="m-0 mt-4 p-0">
                     <Col md={6}>
-                        <Card className="shadow alert- p-2">
-                            <Card.Title>
-                                <b>Pendding issues</b>
-                            </Card.Title>
-                                <table className="table table-striped">
-                                    <tr>
-                                        <td>Issue</td>
-                                        <td>Status</td>
-                                        <td>Action</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fixing rooping and some work</td>
-                                        <td>pendding</td>
-                                        <td className="text-right"><input type="checkbox"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fix chairs</td>
-                                        <td>done</td>
-                                        <td className="text-right"><input type="checkbox"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fix chairs</td>
-                                        <td>pendding</td>
-                                        <td className="text-right"><input type="checkbox"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fix chairs</td>
-                                        <td>pendding</td>
-                                        <td className="text-right"><input type="checkbox"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fix chairs</td>
-                                        <td>pendding</td>
-                                        <td className="text-right"><input type="checkbox"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fix chairs</td>
-                                        <td>pendding</td>
-                                        <td className="text-right"><input type="checkbox"/></td>
-                                    </tr>
-                                </table>
-                        </Card>
+                    <Notification />
                     </Col>
                     <Col md={6}>
                         <Card className="shadow alert- p-2">
