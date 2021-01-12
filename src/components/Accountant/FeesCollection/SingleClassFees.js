@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import AccountantLinks from '../AccountantLinks'
-import { useParams } from 'react-router-dom' 
+import { useParams, Link } from 'react-router-dom' 
 import Loader from '../../Loader/Loader'
 
 
@@ -21,22 +21,19 @@ export default function SingleClassFees() {
         }))
     }, [])
 
-    let content;
-    if(singleClass.status){
-        content = singleClass.data.map( student => (
+    let content
+     content = (singleClass.status) ? singleClass.data.map( student => (
             <tr>
                 <td className="">{ student.name }</td>
                 <td className="">{ student.fees.paid }</td>
                 <td className="">{ student.fees.balance }</td>
                 <td className="">
-                <button className="btn btn-info btn-sm mr-2">Profile</button>
+                    <Link className="btn btn-info btn-sm mr-2" to={`/students/profile/${student.id}`}>show Profile</Link>
                 <button className="btn btn-info btn-sm">Clear</button>
                 </td>
-            </tr>
-        ))
-    }else{
-        content = <Loader />
-    }
+            </tr> 
+            )) : content = <Loader />
+
 
     return (
         <div>

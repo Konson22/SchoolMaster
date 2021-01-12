@@ -55,7 +55,7 @@ export default function FeesCollection() {
             </Col>
             <Col md={6}>
                 <Card>
-                    {/* <FeesTable  /> */}
+      
                 </Card>
             </Col>
             </Row>

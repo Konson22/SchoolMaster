@@ -26,7 +26,7 @@ export default function Profile() {
     
     let content;
     if(student.status){
-        console.log(student.data.name)
+
         content = (
             
                 <Row>
@@ -49,20 +49,12 @@ export default function Profile() {
                         <h4><b>Payment Invoice</b></h4>
                         <table className="table">
                             <tr>
-                                <td>First installement</td>
-                                <td>{ student.data.firstTermPaid } SSP</td>
+                                <td>Fees paid</td>
+                                <td>{ student.data.fees.paid } SSP</td>
                             </tr>
                             <tr>
-                                <td>First installement</td>
-                                <td>{ student.data.secondTermPaid } SSP</td>
-                            </tr>
-                            <tr>
-                                <td>Total amount paid</td>
-                                <td>{ student.data.firstTermPaid + student.data.secondTermPaid } SSP</td>
-                            </tr>
-                            <tr>
-                                <td>Outstanding balance</td>
-                                <td>{ 3500 - (student.data.firstTermPaid + student.data.secondTermPaid) } SSP</td>
+                                <td>outstanding fees</td>
+                                <td>{ student.data.fees.balance } SSP</td>
                             </tr>
                             <Button className="btn btn-sm" variant="success" onClick={ handleInvoiceForm }>Invoice form</Button>
                         </table>

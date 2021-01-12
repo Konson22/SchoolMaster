@@ -28,43 +28,36 @@ export default function Students() {
             status:true,
             data:data,
             error:false
-        }))
-    }, [cName])
+            }))
+        }, [cName])
+        
     
     let content;
     if(students.status){
-        if(students.data.length != 0){
-            content = <DisplayStudent students={ students.data } />
-        }else{
-            content = <div>
-                <h2>No Students in { cName }</h2>
-                </div>
-        }
+        content = (students.data.length != 0) ? <DisplayStudent students={ students.data } />: <h2>No Students in { cName }</h2>
     }
     if(!students.status){
         content = <Loader />
     }
 
+    const search = async () => {
+        // fetch(`/accountant/single-student/${1}`).then(res => res.json()).then(data => setStudents({
+        //     status:true,
+        //     data:data,
+        //     error:false
+        //  }))
+        let info = await students.data.find(std => std.id == "11")
+        console.log(info)
+    }
     return (
         <>
         <div className="student-header">
             <div>
                 <Link className="btn btn-primary btn-sm" to="/registerForm"><BsPersonPlus /> new</Link>
-                <select className="btn btn-primary ml-2 btn-sm">
-                    <option>Primary one</option>
-                    <option>Primary one</option>
-                    <option>Primary one</option>
-                    <option>Primary one</option>
-                    <option>Primary one</option>
-                    <option>Primary one</option>
-                    <option>Primary one</option>
-                    <option>Primary one</option>
-                    <option>Primary one</option>
-                </select>
             </div>
             <ButtonGroup>
                 <FormControl type="text" placeholder="Search.."/>
-                <Button><BsSearch /></Button>
+                <Button  onClick={ search }><BsSearch /></Button>
             </ButtonGroup>
         </div>
 
