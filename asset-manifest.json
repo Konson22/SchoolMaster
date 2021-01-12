@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/konson22.github.io/SchoolMaster/static/css/main.95bb52fe.chunk.css",
-    "main.js": "/konson22.github.io/SchoolMaster/static/js/main.cde18186.chunk.js",
-    "main.js.map": "/konson22.github.io/SchoolMaster/static/js/main.cde18186.chunk.js.map",
-    "runtime-main.js": "/konson22.github.io/SchoolMaster/static/js/runtime-main.97963796.js",
-    "runtime-main.js.map": "/konson22.github.io/SchoolMaster/static/js/runtime-main.97963796.js.map",
-    "static/css/2.20aa2d7b.chunk.css": "/konson22.github.io/SchoolMaster/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.d81eb5f3.chunk.js": "/konson22.github.io/SchoolMaster/static/js/2.d81eb5f3.chunk.js",
-    "static/js/2.d81eb5f3.chunk.js.map": "/konson22.github.io/SchoolMaster/static/js/2.d81eb5f3.chunk.js.map",
-    "index.html": "/konson22.github.io/SchoolMaster/index.html",
-    "static/css/2.20aa2d7b.chunk.css.map": "/konson22.github.io/SchoolMaster/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.95bb52fe.chunk.css.map": "/konson22.github.io/SchoolMaster/static/css/main.95bb52fe.chunk.css.map",
-    "static/js/2.d81eb5f3.chunk.js.LICENSE.txt": "/konson22.github.io/SchoolMaster/static/js/2.d81eb5f3.chunk.js.LICENSE.txt"
+    "main.css": "/SchoolMaster/static/css/main.95bb52fe.chunk.css",
+    "main.js": "/SchoolMaster/static/js/main.cab0ab96.chunk.js",
+    "main.js.map": "/SchoolMaster/static/js/main.cab0ab96.chunk.js.map",
+    "runtime-main.js": "/SchoolMaster/static/js/runtime-main.4f70dea7.js",
+    "runtime-main.js.map": "/SchoolMaster/static/js/runtime-main.4f70dea7.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/SchoolMaster/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.06230359.chunk.js": "/SchoolMaster/static/js/2.06230359.chunk.js",
+    "static/js/2.06230359.chunk.js.map": "/SchoolMaster/static/js/2.06230359.chunk.js.map",
+    "index.html": "/SchoolMaster/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/SchoolMaster/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.95bb52fe.chunk.css.map": "/SchoolMaster/static/css/main.95bb52fe.chunk.css.map",
+    "static/js/2.06230359.chunk.js.LICENSE.txt": "/SchoolMaster/static/js/2.06230359.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.97963796.js",
+    "static/js/runtime-main.4f70dea7.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.d81eb5f3.chunk.js",
+    "static/js/2.06230359.chunk.js",
     "static/css/main.95bb52fe.chunk.css",
-    "static/js/main.cde18186.chunk.js"
+    "static/js/main.cab0ab96.chunk.js"
   ]
 }
