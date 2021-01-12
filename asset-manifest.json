@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SchoolMaster/static/css/main.95bb52fe.chunk.css",
-    "main.js": "/SchoolMaster/static/js/main.cab0ab96.chunk.js",
-    "main.js.map": "/SchoolMaster/static/js/main.cab0ab96.chunk.js.map",
+    "main.js": "/SchoolMaster/static/js/main.f1c7198b.chunk.js",
+    "main.js.map": "/SchoolMaster/static/js/main.f1c7198b.chunk.js.map",
     "runtime-main.js": "/SchoolMaster/static/js/runtime-main.4f70dea7.js",
     "runtime-main.js.map": "/SchoolMaster/static/js/runtime-main.4f70dea7.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/SchoolMaster/static/css/2.20aa2d7b.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.06230359.chunk.js",
     "static/css/main.95bb52fe.chunk.css",
-    "static/js/main.cab0ab96.chunk.js"
+    "static/js/main.f1c7198b.chunk.js"
   ]
 }
