@@ -70,6 +70,7 @@ export default function Students() {
                         <th>Class</th>
                         <th>Gradient</th>
                         <th>Gradient Contact</th>
+                        <th>Outstanding balance</th>
                         <th className="text-center">Actions</th>
                     </tr>
                 </thead>

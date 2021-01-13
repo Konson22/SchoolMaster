@@ -15,8 +15,7 @@ export default function Profile() {
     })
     const {id} = useParams()
     useEffect(()=> {
-        fetch('https://schoolmaster-api.herokuapp.com/students').then(res => res.json())
-        .then(data => data.find(student => student.id == id))
+        fetch(`https://schoolmaster-api.herokuapp.com/students/profile/${id}`).then(res => res.json())
         .then( profile => setStudent({
             status:true,
             data:profile,
@@ -24,43 +23,38 @@ export default function Profile() {
         }))
     }, [])
     
+    
     let content;
     if(student.status){
-
-        content = (
-            
+        content = student.data.map(student => 
                 <Row>
                     <Col lg={4} md={6}>
-                        <img className="profileImg" src={process.env.PUBLIC_URL + student.data.imgUrl} />
+                        <img className="profileImg" src={process.env.PUBLIC_URL + student.imgUrl} />
                     </Col>
                     <Col lg={4} md={6} >
-                        <h4><b>Student Details</b></h4>
-                        <p>Name: { student.data.name }</p>
-                        <p>Gender: { student.data.gender }</p>
-                        <p>Birth Date:{ student.data.birthDate }</p>
-                        <p>Address: { student.data.address }</p>
-                        <p>Class/Primary: { student.data.class }</p>
-                        <p>Graient Name: { student.data.gradientName }</p>
-                        <p>Graient occupation: { student.data.gradientOccupation }</p>
-                        <p>Graient phone: { student.data.gradientContact }</p>
+                        <p>Name: { student.name }</p>
+                        <p>Gender: { student.gender }</p>
+                        <p>Birth Date:{ student.birthDate }</p>
+                        <p>Address: { student.address }</p>
+                        <p>Class/Primary: { student.class }</p>
+                        <p>Graient Name: { student.gradientName }</p>
+                        <p>Graient phone: { student.gradientContact }</p>
                     </Col>
-                   
                     <Col lg={3} md={12}>
-                        <h4><b>Payment Invoice</b></h4>
                         <table className="table">
                             <tr>
                                 <td>Fees paid</td>
-                                <td>{ student.data.fees.paid } SSP</td>
+                                <td>{ student.fees.paid } SSP</td>
                             </tr>
                             <tr>
                                 <td>outstanding fees</td>
-                                <td>{ student.data.fees.balance } SSP</td>
+                                <td>{ student.fees.balance } SSP</td>
                             </tr>
                             <Button className="btn btn-sm" variant="success" onClick={ handleInvoiceForm }>Invoice form</Button>
                         </table>
                     </Col>
                 </Row>
-                
+
         )
         
     }else{
@@ -89,21 +83,17 @@ export default function Profile() {
         <div>
             
             <Card className="p">
-                <Card.Title>
-                    <b>Student profile</b>
-                </Card.Title>
                 <Card.Body>
                 { content }
                 </Card.Body>
-
-                <Card.Footer>
+                <Card.Title>
                 <div className=" text-rght">
                     <Button variant="success" onClick={ handleInvoiceForm }>Invoice form</Button>
                     <Button className="mx-2">Edit profile</Button>
                     <Button className="mr-2" variant="warning">Result</Button>
                     <Button variant="danger">Dismiss</Button>
             </div>
-                </Card.Footer>
+                </Card.Title>
             </Card>
             
                 {

@@ -15,17 +15,12 @@ export default function Accountant() {
         <>
         <AccountantLinks/>
         <Row>
-            <Col md={6}>
-                <Card>
-                    <Chartjs />
-                </Card>
-            </Col>
-            <Col md={6}>
-                <Card>
-                    <Chartjs />
-                </Card>
-            </Col>
             <Col md={7}>
+                <Card>
+                    <Chartjs />
+                </Card>
+            </Col>
+            <Col md={5}>
                 <Card className="alert-secondary">
                 <Card.Body>
                     <h3>Expense entary form</h3>

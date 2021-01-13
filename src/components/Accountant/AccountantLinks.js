@@ -8,16 +8,21 @@ import {GlobalContext} from '../GlobalContext/GlobalContext'
 
 export default function AccountantLinks() {
     const propsData = useContext(GlobalContext)
-    const paid = propsData.students.data.map(data => data.fees.paid).reduce((fees, total) => +fees + +total, 0)
-    const balance = propsData.students.data.map(data => data.fees.balance).reduce((fees, total) => +fees + +total, 0)
-    const expernse = propsData.expernse.data.map(data => data.totalPrice).reduce((fees, total) => +fees + +total, 0)
 
+    let paid
+    let balance
+    let expernse
+    if(propsData.students.status && propsData.expernse.status){
+        paid = propsData.students.data.map(data => data.fees.paid).reduce((fees, total) => +fees + +total, 0)
+        balance = propsData.students.data.map(data => data.fees.balance).reduce((fees, total) => +fees + +total, 0)
+        expernse = propsData.expernse.data.map(data => data.totalPrice).reduce((fees, total) => +fees + +total, 0)
+    }
     return (
         <>
         <Row className="mb-4">
             <Col md={4}>
                 <Card className="alert-success p-2 shadow">
-                    <Link className="nav-link text-dark" to="/accountant/fees">
+                    <Link className="nav-link text-dark" to="/fees-rocord">
                         <Card.Title>
                         <h4>Total paid</h4>
                         </Card.Title>
@@ -30,7 +35,7 @@ export default function AccountantLinks() {
             </Col>
             <Col md={4}>
                 <Card className="alert-warning p-2 shadow">
-                    <Link className="nav-link text-dark" to="/accountant/fees">
+                    <Link className="nav-link text-dark" to="/accountant/fees-rocord">
                         <Card.Title>
                         <h4>Outstanding fees</h4>
                         </Card.Title>

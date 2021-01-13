@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { BsHouse, BsWrench, BsPeople, BsBarChart, BsEnvelope, BsPersonPlus,BsGraphUp, BsCardChecklist } from 'react-icons/bs'
-import { FaChartBar, FaUser } from 'react-icons/fa'
+import { BsHouse, BsWrench, BsPeople, BsBarChart, BsEnvelope, BsPersonPlus,BsGraphUp, BsCardChecklist, BsChevronCompactDown } from 'react-icons/bs'
+import { FaChartBar, FaUser, FaFileSignature } from 'react-icons/fa'
 import { useTransition, animated } from 'react-spring'
 import './Sidebar.css'
 
@@ -22,7 +22,7 @@ export default function Sidebar() {
                <ul>
                     <li className="nav"><Link className="nav-link" to="/"><BsHouse className="sidebar-icon" /> Dashboard</Link></li>
                     <li className="nav"><Link className="nav-link" to="/stuffs"><BsPeople className="sidebar-icon"/> Stuffs</Link></li>
-                    <li className="nav" onClick={()=> setNav(!showSubNav)}><Link className="nav-link" ><BsPeople className="sidebar-icon"/> Students</Link></li>
+                    <li className="nav" onClick={()=> setNav(!showSubNav)}><Link className="nav-link" ><BsPeople className="sidebar-icon"/> Students <BsChevronCompactDown /></Link></li>
                     <div className={ showSubNav ? "inner-nav" : "hideNav"}>
                         <ul onClick={ hideInnerNav }>
                             <li className="nav"><Link className="nav-link" to="/students/Primary-one"> Primary one</Link></li>
@@ -37,7 +37,7 @@ export default function Sidebar() {
                     </div>
                    <li className="nav"><Link className="nav-link" to="/registerForm"><BsPersonPlus className="sidebar-icon"/> Register</Link></li>
                    <li className="nav"><Link className="nav-link" to="/accountant"><BsGraphUp className="sidebar-icon"/> Accountant</Link></li>
-                   <li className="nav"><Link className="nav-link" to="/"><BsBarChart className="sidebar-icon"/> Assets</Link></li>
+                   <li className="nav"><Link className="nav-link" to="/fees-rocord"><FaFileSignature className="sidebar-icon"/> Fees record</Link></li>
                    <li className="nav"><Link className="nav-link" to="/"><BsEnvelope className="sidebar-icon"/> Messages</Link></li>
                    <li className="nav"><Link className="nav-link" to="/"><BsCardChecklist className="sidebar-icon"/> Attendance</Link></li>
                    <li className="nav"><Link className="nav-link" to="/">Notification</Link></li>

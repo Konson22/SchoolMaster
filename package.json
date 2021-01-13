@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "homepage":"https://konson22.github.io/SchoolMaster",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://schoolmaster-api.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
     "chartjs": "^0.3.24",

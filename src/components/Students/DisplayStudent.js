@@ -14,8 +14,9 @@ export default function DisplayStudent({ students }) {
                         <td>{student.class}</td>
                         <td>{student.gradientName}</td>
                         <td>{student.gradientContact}</td>
+                        <td>{student.fees.balance}</td>
                         <td className="text-right">
-                            <Link className="btn btn-info btn-sm" to={`/students/profile/${student.id}`}><BsPerson /> Profile</Link> 
+                            <Link className="btn btn-info btn-sm" to={`/profile/${student._id}`}><BsPerson /> Profile</Link> 
                             <button className="btn btn-info btn-sm mx-2"><BsPen /> Edit</button> 
                             <button className="btn btn-danger btn-sm"><BsTrash /> Delete</button>
                         </td>

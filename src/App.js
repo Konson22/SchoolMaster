@@ -1,6 +1,6 @@
 
 
-import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link, component} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import Navbar from './components/Navbar/Navbar'
@@ -36,16 +36,17 @@ function App() {
           <main>
             <Switch>
               <Route exact path="/"><Main /></Route>
-              
-              <Route exact path="/students/:cName"><Students /></Route>
-              <Route exact path="/students/profile/:id"><Profile /></Route>
-              <Route exact path="/stuffs"><Stuffs /></Route>
-              <Route exact path="/accountant"><Accountant /></Route>
-              <Route exact path="/registerForm"><RegisterForm /></Route>
-              <Route exact path="/accountant/fees"><FeesCollection /></Route>
-              <Route exact path="/accountant/payroll"><Payroll /></Route>
-              <Route exact path="/accountant/single-class-record/:cName"><SingleClassFees /></Route>
-              <Route exact path="/accountant/expenses"><Expense /> </Route>
+              <Route exact path="/SchoolMaster"><Main /></Route>
+              <Route  path="/students/:cName"><Students /></Route>
+              <Route  path="/profile/:id"><Profile /></Route>
+              <Route  path="/stuffs"><Stuffs /></Route>
+              <Route  path="/accountant" component={Accountant}>
+              </Route>
+              <Route  path="/single-class-record/:cName"><SingleClassFees /></Route>
+              <Route  path="/registerForm"><RegisterForm /></Route>
+              <Route  path="/fees-rocord"><FeesCollection /></Route>
+              <Route  path="/payroll"><Payroll /></Route>
+              <Route  path="/expenses"><Expense /> </Route>
             </Switch>
     
 

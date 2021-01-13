@@ -24,7 +24,7 @@ export default function FeesTable({ filteredData }){
                     <td>{ filteredData.primary1.No }</td>
                     <td>{ filteredData.primary1.paid }</td>
                     <td>{ filteredData.primary1.balance }</td>
-                    <td><Link to="/accountant/single-class-record/Primary-one" className="btn btn-info btn-sm">view record</Link></td>
+                    <td><Link to="/single-class-record/Primary-one" className="btn btn-info btn-sm">view record</Link></td>
                 </tr>
                 <tr>
                     <td>Primary two</td>

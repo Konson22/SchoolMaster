@@ -28,8 +28,8 @@ export default function SingleClassFees() {
                 <td className="">{ student.fees.paid }</td>
                 <td className="">{ student.fees.balance }</td>
                 <td className="">
-                    <Link className="btn btn-info btn-sm mr-2" to={`/students/profile/${student.id}`}>show Profile</Link>
-                <button className="btn btn-info btn-sm">Clear</button>
+                    <Link className="btn btn-info btn-sm mr-2" to={`/profile/${student._id}`}>show Profile</Link>
+                <button className="btn btn-warning btn-sm">Invoice form</button>
                 </td>
             </tr> 
             )) : content = <Loader />
