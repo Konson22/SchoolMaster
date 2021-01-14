@@ -53,17 +53,13 @@ class RegisterForm extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault()
-        fetch('/register', {
-            method:"POST",
-            headers: {"Content-Type": "application/json"},
-            body:JSON.stringify(this.state)
-        })
+        axios.post('/register', JSON.stringify(this.state))
     }
 
     render() {
         return (
             <Card className="submissionForm alert-secondary">
-            <Form className="p-3" onSubmit={ this.handleSubmit }>
+            <Form className="p-3" action="POST" onSubmit={ this.handleSubmit }>
                 <div className="text-center py-3">
                     <h3>Ministry of education</h3>
                     <h3>Mahd juba secondary school</h3>
