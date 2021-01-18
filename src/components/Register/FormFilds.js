@@ -6,36 +6,31 @@ import { Form, FormGroup, FormControl, Row, Col, Card, Button } from 'react-boot
 import axios from 'axios'
 import './RegisterForm.css'
 
-class RegisterForm extends Component {
+class FormFilds extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            name: '',
-            gender:'',
-            birthDate:'',
-            address:'',
-            imgUrl:"/images/img2.jpg",
-            class:'',
-            studentContact:'',
-            gradientName:'',
-            relationShip:'',
-            gradientContact:'',
-            fees:{
-                paid:"0",
-                balance:"0"
+        this.Message = false
+            this.state = {
+                name: '',
+                gender:'',
+                birthDate:'',
+                address:'',
+                imgUrl:"/images/default-profile-img.jpg",
+                class:'',
+                studentContact:'',
+                gradientName:'',
+                relationShip:'',
+                gradientContact:'',
+                fees:{
+                    paid:"0",
+                    balance:"0"
+                }
             }
-        }
     }
 
-    componentDidMount() {
 
-    }
-    handleInput = (e) => {
-        e.preventDefault()
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
+    handleInput = (e) =>  this.setState({[e.target.name]: e.target.value})
+
     handleFeesPaidInput = (e) => {
         e.preventDefault()
         this.setState({
@@ -51,9 +46,14 @@ class RegisterForm extends Component {
             fees:{paid:this.state.fees.paid, balance: e.target.value}
         })
     }
+  
     handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('/register', JSON.stringify(this.state))
+        this.props.setProcessing(true)
+        let body = JSON.stringify(this.state)
+        axios.post('https://schoolmaster-api.herokuapp.com/registerStudent', this.state).then(data => {
+            this.props.setProcessing(false)
+        })
     }
 
     render() {
@@ -151,5 +151,5 @@ class RegisterForm extends Component {
 }
 
 
-export default RegisterForm;
 
+export default FormFilds;

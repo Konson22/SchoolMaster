@@ -9,7 +9,7 @@ body{
 aside{
   min-height: 100vh;
   flex-basis: 15%;
-  background-color: rgb(211, 55, 107);
+  background-color: rgb(103, 149, 235);
 }
 section{
   flex: 1;
@@ -25,6 +25,18 @@ main{
   pointer-events: none;
 }
 
+.my-table{
+  width: 100%;
+}
+.my-table tr th{
+  padding: 10px 5px;
+}
+.my-table tr{
+  border: 1px solid #4444;
+}
+.my-table tr td{
+  padding: 5px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -23,8 +23,8 @@ export default function Chartjs() {
                 classData.students.data.filter(cName => cName.class == "Primary eight").map(c => c.fees.paid).reduce((a, t) => +a + +t, 0)
             ],
             backgroundColor:[
-                'rgba(50,209,105)',
-                'rgba(250,29,89)',
+                'rgba(50,209,105, .5)',
+                'rgba(250,29,89, .5)',
                 'rgba(10,69,5)',
                 'rgba(25,249,32)',
                 'rgba(250,29,9)',

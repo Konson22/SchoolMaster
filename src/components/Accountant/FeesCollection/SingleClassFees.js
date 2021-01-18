@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import AccountantLinks from '../AccountantLinks'
 import { useParams, Link } from 'react-router-dom' 
 import Loader from '../../Loader/Loader'
 
@@ -28,7 +27,7 @@ export default function SingleClassFees() {
                 <td className="">{ student.fees.paid }</td>
                 <td className="">{ student.fees.balance }</td>
                 <td className="">
-                    <Link className="btn btn-info btn-sm mr-2" to={`/profile/${student._id}`}>show Profile</Link>
+                    <Link className="btn btn-info btn-sm mr-2" to={`/SchoolMaster/profile/${student._id}`}>show Profile</Link>
                 <button className="btn btn-warning btn-sm">Invoice form</button>
                 </td>
             </tr> 
@@ -37,9 +36,8 @@ export default function SingleClassFees() {
 
     return (
         <div>
-            <AccountantLinks />
-            <div className="table-container">
-            <table className="table table-striped">
+            <div className="-container">
+            <table className="my-table -striped">
                 <thead>
                     <tr>
                         <th className="">Student Name</th>

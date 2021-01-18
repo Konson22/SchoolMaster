@@ -8,11 +8,7 @@ import './Sidebar.css'
 export default function Sidebar() {
     const [showSubNav, setNav] = useState(false)
     const hideInnerNav = () => setNav(false)
-    // const transitions = useTransition(showSubNav, null,{
-    //     from:{transform:'translateY(-10%)'},
-    //     enter:{transform:'translate(0)'},
-    //     leave:{transform:'translateY(-10%)'}
-    // })
+ 
     return (
         <aside className="">
            <div className="sidebar-heager">
@@ -20,29 +16,30 @@ export default function Sidebar() {
            </div>
            <div className="sidebar-body">
                <ul>
-                    <li className="nav"><Link className="nav-link" to="/"><BsHouse className="sidebar-icon" /> Dashboard</Link></li>
-                    <li className="nav"><Link className="nav-link" to="/stuffs"><BsPeople className="sidebar-icon"/> Stuffs</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/"><BsHouse className="sidebar-icon" /> Dashboard</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/stuffs"><BsPeople className="sidebar-icon"/> Stuffs</Link></li>
                     <li className="nav" onClick={()=> setNav(!showSubNav)}><Link className="nav-link" ><BsPeople className="sidebar-icon"/> Students <BsChevronCompactDown /></Link></li>
                     <div className={ showSubNav ? "inner-nav" : "hideNav"}>
                         <ul onClick={ hideInnerNav }>
-                            <li className="nav"><Link className="nav-link" to="/students/Primary-one"> Primary one</Link></li>
-                            <li className="nav"><Link className="nav-link" to="/students/Primary-two">Primary two</Link></li>
-                            <li className="nav"><Link className="nav-link" to="/students/Primary-three"> Primary three</Link></li>
-                            <li className="nav"><Link className="nav-link" to="/students/Primary-four">Primary four</Link></li>
-                            <li className="nav"><Link className="nav-link" to="/students/Primary-five"> Primary five</Link></li>
-                            <li className="nav"><Link className="nav-link" to="/students/Primary-six">Primary six</Link></li>
-                            <li className="nav"><Link className="nav-link" to="/students/Primary-seven"> Primary seven</Link></li>
-                            <li className="nav"><Link className="nav-link" to="/students/Primary-eight">Primary eight</Link></li>
+                            <li className="nav"><Link className="nav-link" to="/SchoolMaster/students/Primary-one"> Primary one</Link></li>
+                            <li className="nav"><Link className="nav-link" to="/SchoolMaster/students/Primary-two">Primary two</Link></li>
+                            <li className="nav"><Link className="nav-link" to="/SchoolMaster/students/Primary-three"> Primary three</Link></li>
+                            <li className="nav"><Link className="nav-link" to="/SchoolMaster/students/Primary-four">Primary four</Link></li>
+                            <li className="nav"><Link className="nav-link" to="/SchoolMaster/students/Primary-five"> Primary five</Link></li>
+                            <li className="nav"><Link className="nav-link" to="/SchoolMaster/students/Primary-six">Primary six</Link></li>
+                            <li className="nav"><Link className="nav-link" to="/SchoolMaster/students/Primary-seven"> Primary seven</Link></li>
+                            <li className="nav"><Link className="nav-link" to="/SchoolMaster/students/Primary-eight">Primary eight</Link></li>
                        </ul>
                     </div>
-                   <li className="nav"><Link className="nav-link" to="/registerForm"><BsPersonPlus className="sidebar-icon"/> Register</Link></li>
-                   <li className="nav"><Link className="nav-link" to="/accountant"><BsGraphUp className="sidebar-icon"/> Accountant</Link></li>
-                   <li className="nav"><Link className="nav-link" to="/fees-rocord"><FaFileSignature className="sidebar-icon"/> Fees record</Link></li>
-                   <li className="nav"><Link className="nav-link" to="/"><BsEnvelope className="sidebar-icon"/> Messages</Link></li>
-                   <li className="nav"><Link className="nav-link" to="/"><BsCardChecklist className="sidebar-icon"/> Attendance</Link></li>
-                   <li className="nav"><Link className="nav-link" to="/">Notification</Link></li>
-                   <li className="nav"><Link className="nav-link" to="/">Messages</Link></li>
-                   <li className="nav"><Link className="nav-link" to="/"><BsWrench /> Setting</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/registerForm"><BsPersonPlus className="sidebar-icon"/> Register</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/accountant"><BsGraphUp className="sidebar-icon"/> Accountant</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/fees-rocord"><FaFileSignature className="sidebar-icon"/> Fees record</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/expenses"><BsEnvelope className="sidebar-icon"/> Expenses</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/"><BsEnvelope className="sidebar-icon"/> Payroll</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/"><BsEnvelope className="sidebar-icon"/> Messages</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/">Notification</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/">Messages</Link></li>
+                    <li className="nav"><Link className="nav-link" to="/SchoolMaster/"><BsWrench /> Setting</Link></li>
                </ul>
            </div>
         </aside>

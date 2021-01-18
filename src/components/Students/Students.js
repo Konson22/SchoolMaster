@@ -53,7 +53,7 @@ export default function Students() {
         <>
         <div className="student-header">
             <div>
-                <Link className="btn btn-primary btn-sm" to="/registerForm"><BsPersonPlus /> new</Link>
+                <Link className="btn btn-primary btn-sm" to="/SchoolMaster/registerForm"><BsPersonPlus /> new</Link>
             </div>
             <ButtonGroup>
                 <FormControl type="text" placeholder="Search.."/>

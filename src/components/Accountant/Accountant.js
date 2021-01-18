@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Card, Row, Col, Button, Form, FormGroup, FormControl } from 'react-bootstrap'
 import { FaSave } from 'react-icons/fa'
-import AccountantLinks from './AccountantLinks'
 import Chartjs from '../Chartjs/Chartjs'
 import {GlobalContext} from '../GlobalContext/GlobalContext'
 
@@ -13,7 +12,6 @@ export default function Accountant() {
 
     return (
         <>
-        <AccountantLinks/>
         <Row>
             <Col md={7}>
                 <Card>

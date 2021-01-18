@@ -1,22 +1,2 @@
 
 
-.my-table{
-    width: 100%;
-}
-.my-table tr td, .my-table tr th{
-    border: 1px solid rgb(138, 137, 137);
-}
-.my-table thead{
-    background-color: rgb(207, 180, 233);
-
-}
-.my-table thead tr th{
-    padding: 5px;
-
-}
-.my-table thead tr th{
-    padding: 15px;
-}
-.my-table tbody tr td, tbody tr th{
-    padding: 5px 5px;
-}

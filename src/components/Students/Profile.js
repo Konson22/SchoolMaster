@@ -40,17 +40,151 @@ export default function Profile() {
                         <p>Graient Name: { student.gradientName }</p>
                         <p>Graient phone: { student.gradientContact }</p>
                     </Col>
-                    <Col lg={3} md={12}>
-                        <table className="table">
+                    <Col lg={4} md={6} >
+                        <h4>Fees data</h4>
+                        <p><b>Fees paid</b> { student.fees.paid } SSP </p>
+                        <p><b>out standing fees</b> { student.fees.balance } SSP </p>
+                        <Button className="btn btn-sm" variant="success" onClick={ handleInvoiceForm }>Invoice form</Button>
+                    </Col>
+                    <Col lg={4} md={6} >
+                        <h4>First term</h4>
+                        <table className="my-table">
                             <tr>
-                                <td>Fees paid</td>
-                                <td>{ student.fees.paid } SSP</td>
+                                <th>Subject</th>
+                                <th>Marks</th>
+                                <th>pass marks</th>
+                                <th>Student makrs</th>
                             </tr>
                             <tr>
-                                <td>outstanding fees</td>
-                                <td>{ student.fees.balance } SSP</td>
+                                <td>English</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
                             </tr>
-                            <Button className="btn btn-sm" variant="success" onClick={ handleInvoiceForm }>Invoice form</Button>
+                            <tr>
+                                <td>Math</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>CRE</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>History</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>Science</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>Social study</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                        </table>
+                    </Col>
+                    <Col lg={4} md={6} >
+                        <h4>First term</h4>
+                        <table className="my-table">
+                            <tr>
+                                <th>Subject</th>
+                                <th>Marks</th>
+                                <th>pass marks</th>
+                                <th>Student makrs</th>
+                            </tr>
+                            <tr>
+                                <td>English</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>Math</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>CRE</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>History</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>Science</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>Social study</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                        </table>
+                    </Col>
+                    <Col lg={4 } md={6} >
+                        <h4>Final term</h4>
+                        <table className="my-table">
+                            <tr>
+                                <th>Subject</th>
+                                <th>Marks</th>
+                                <th>pass marks</th>
+                                <th>Student makrs</th>
+                            </tr>
+                            <tr>
+                                <td>English</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>Math</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>CRE</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>History</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>Science</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
+                            <tr>
+                                <td>Social study</td>
+                                <td>100</td>
+                                <td>50</td>
+                                <td>74</td>
+                            </tr>
                         </table>
                     </Col>
                 </Row>
@@ -82,25 +216,21 @@ export default function Profile() {
     return (
         <div>
             
-            <Card className="p">
-                <Card.Body>
+            <div className="p">
+                <div className="mb-3 text-rght">
+                    <Button className=" btn-sm" variant="success" onClick={ handleInvoiceForm }>Invoice form</Button>
+                    <Button className=" btn-sm mx-2">Edit profile</Button>
+                    <Button className=" btn-sm" variant="danger">Dismiss</Button>
+                </div>
+                <div>
                 { content }
-                </Card.Body>
-                <Card.Title>
-                <div className=" text-rght">
-                    <Button variant="success" onClick={ handleInvoiceForm }>Invoice form</Button>
-                    <Button className="mx-2">Edit profile</Button>
-                    <Button className="mr-2" variant="warning">Result</Button>
-                    <Button variant="danger">Dismiss</Button>
+                </div>
             </div>
-                </Card.Title>
-            </Card>
             
                 {
                     transitions.map(({item, key, props})=> 
                         item && <animated.div key={key} style={props} className="invoice-form">
                         <div className="invoice-center">
-                            
                             <Card>
                                 <Card.Header className="text-right">
                                     <BsX onClick={ hideInvoiceForm } />

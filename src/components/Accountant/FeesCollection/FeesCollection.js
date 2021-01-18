@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react'
-import AccountantLinks from '../AccountantLinks'
 import Loader from '../../Loader/Loader'
 import { Row, Col, Card} from 'react-bootstrap'
 import { FaSave, FaPrint } from 'react-icons/fa'
@@ -14,7 +13,10 @@ export default function FeesCollection() {
     let content 
     if(classData.students.status){
         let allClasses = classData.students.data
-        const all = {paid:allClasses.map(paid => paid.fees.paid).reduce((amount, total)=> +amount + +total, 0), balance:allClasses.map(balance => balance.fees.balance).reduce((amount, total)=> +amount + +total, 0)}
+        let all = {
+            paid:allClasses.map(paid => paid.fees.paid).reduce((amount, total)=> +amount + +total, 0), 
+            balance:allClasses.map(balance => balance.fees.balance).reduce((amount, total)=> +amount + +total, 0)
+        }
 
         let pr1 =  classData.students.data.filter(className => className.class == "Primary one")
         const primary1 = {No:pr1.length, paid:pr1.map(paid => paid.fees.paid).reduce((amount, total)=> +amount + +total, 0), balance:pr1.map(balance => balance.fees.balance).reduce((amount, total)=> +amount + +total, 0)}
@@ -44,21 +46,5 @@ export default function FeesCollection() {
     }else{
         content = <Loader />
     }
-    return (
-        <div>
-            <AccountantLinks/>
-            <Row>
-            <Col md={8}>
-                <Card>
-                    { content }
-                </Card>
-            </Col>
-            <Col md={6}>
-                <Card>
-      
-                </Card>
-            </Col>
-            </Row>
-        </div>
-    )
+    return <Card>{ content } </Card>
 }
